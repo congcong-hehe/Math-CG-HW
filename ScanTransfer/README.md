@@ -9,4 +9,4 @@
 * Qt 5.12.3
 
 ## 运行结果
-![img](show.PNG)
+![img](show.png)
