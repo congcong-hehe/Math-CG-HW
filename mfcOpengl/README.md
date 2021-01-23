@@ -7,4 +7,4 @@
 * OpenGL 
 
 ## 效果
-![img](捕获.png)
+![img](捕获.PNG)
