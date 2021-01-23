@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageWarpClass</class>
+ <widget class="QWidget" name="ImageWarpClass">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>362</width>
+    <height>43</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ImageWarp</string>
+  </property>
+  <widget class="QPushButton" name="open_file_btn">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clear_btn">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>10</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空画点</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>10</y>
+     <width>69</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>IDW</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>RBF</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="transfer_btn">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>10</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>转换</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ImageWarp.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>open_file_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageWarpClass</receiver>
+   <slot>openFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clear_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageWarpClass</receiver>
+   <slot>clearPoints()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>transfer_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageWarpClass</receiver>
+   <slot>imageWarp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>308</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>310</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>ImageWarpClass</receiver>
+   <slot>chooseAlgorithm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openFile()</slot>
+  <slot>clearPoints()</slot>
+  <slot>imageWarp()</slot>
+  <slot>chooseAlgorithm()</slot>
+ </slots>
+</ui>

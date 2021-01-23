@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MiniDrawClass</class>
+ <widget class="QWidget" name="MiniDrawClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MiniDraw</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="7,1">
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>10000</width>
+       <height>10000</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <widget class="QPushButton" name="freehand_btn">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Freehand</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="line_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Line</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ellipse_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ellipse</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rect_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rect</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="polygon_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Polygon</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clear_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MiniDraw.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>polygon_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MiniDrawClass</receiver>
+   <slot>setPolygon()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>521</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>line_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MiniDrawClass</receiver>
+   <slot>setLine()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rect_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MiniDrawClass</receiver>
+   <slot>setRect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>507</x>
+     <y>168</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clear_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MiniDrawClass</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>freehand_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MiniDrawClass</receiver>
+   <slot>setFreehand()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ellipse_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MiniDrawClass</receiver>
+   <slot>setEllipse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>setFreehand()</slot>
+  <slot>setLine()</slot>
+  <slot>setEllipse()</slot>
+  <slot>setRect()</slot>
+  <slot>setPolygon()</slot>
+  <slot>clear()</slot>
+ </slots>
+</ui>
